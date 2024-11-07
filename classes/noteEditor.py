@@ -55,11 +55,11 @@ class NoteEditor(QWidget):
         self.text_edit.setCurrentCharFormat(text_format)
 
     def get_note_content(self):
-        # Retorna o conteúdo em Markdown
+        
         return self.convert_to_markdown(self.text_edit.toHtml())
 
     def set_note_content(self, content):
-        # Define o conteúdo, aplicando a formatação
+       
         html_content = self.convert_markdown_to_html(content)
         self.text_edit.setHtml(html_content)
 
